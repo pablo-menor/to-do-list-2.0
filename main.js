@@ -48,7 +48,12 @@ function addToList(task) {
             let p = document.querySelector(`#e${idd}`);
             p.style.textDecoration = "line-through";
             p.style.color = '#3C3C3C';
-            icon.remove();
+            icon.classList.add('animate__animated', 'animate__backOutRight');
+            setTimeout(() => {
+                icon.remove();  
+            }, 500);
+            
+           
         })
     })
 }
